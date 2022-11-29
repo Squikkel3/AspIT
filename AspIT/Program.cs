@@ -89,7 +89,7 @@ namespace AspIT
             int tal1 = int.Parse(Console.ReadLine());
             Console.Write("indtast tal2: ");
             int tal2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("9 + 10 = 21");
+            Console.WriteLine("9 + 10 = 21 ...");
         }
     }
 }
