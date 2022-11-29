@@ -13,8 +13,9 @@ namespace AspIT
             //Digt();
             //Taxa();
             //Converting();
-            Hobby();
+            //Hobby();
             //Meth();
+            Sko();
         }
 
         static void Hello()
@@ -89,7 +90,27 @@ namespace AspIT
             int tal1 = int.Parse(Console.ReadLine());
             Console.Write("indtast tal2: ");
             int tal2 = int.Parse(Console.ReadLine());
-            Console.WriteLine("9 + 10 = 21 ...");
+            Console.WriteLine("9 + 10 = 21");
         }
+        static void Sko()
+        {
+            Console.Write("Indtast skostørrelse: ");
+            int skostørrelse = int.Parse(Console.ReadLine());
+            if (skostørrelse > 45)
+            {
+                Console.WriteLine("Store plader.");
+            }
+            else if (skostørrelse >= 38)
+            {
+                Console.WriteLine("Gennemsnitlige fødder.");
+            }
+            else
+            {
+                Console.WriteLine("Små fødder.");
+            }
+
+
+
+        }   
     }
 }
