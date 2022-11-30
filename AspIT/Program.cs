@@ -15,7 +15,8 @@ namespace AspIT
             //Converting();
             //Hobby();
             //Meth();
-            Sko();
+            //Sko();
+            BMI();
         }
 
         static void Hello()
@@ -108,9 +109,44 @@ namespace AspIT
             {
                 Console.WriteLine("Små fødder.");
             }
-
-
-
         }   
+        static void BMI()
+        {
+            Console.Write("Indtast din højde i meter: ");
+            int højde = int.Parse(Console.ReadLine());
+            Console.Write("Indtast din vægt i kilo: ");
+            int vægt = int.Parse(Console.ReadLine());
+            Console.Write("Indtast køn M/K: ");
+            int køn = int.Parse(Console.ReadLine());
+            int BMI;
+            string vægtig = "";
+            BMI = vægt / (højde * højde);
+            Console.Write($"Du har en BMI på {BMI}");
+            Console.Write(", det betyder at du ");
+            if (BMI < 18.5)
+            {
+                vægtig = "undervægtig";
+                Console.WriteLine($"er undervægtig.");
+            }
+            else if (BMI < 25)
+            {
+                vægtig = "normal vægtig";
+            }
+            else if (BMI < 30)
+            {
+                vægtig = "overvægtig";
+            }
+            else i9f
+            {
+                vægtig = "meget overvægtig";
+            }
+            else if (køn = M)
+            {
+
+            }
+
+            Console.WriteLine($"er {vægtig}.");
+
+        }
     }
 }
