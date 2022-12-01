@@ -113,20 +113,17 @@ namespace AspIT
         static void BMI()
         {
             Console.Write("Indtast din højde i meter: ");
-            int højde = int.Parse(Console.ReadLine());
+            double højde = double.Parse(Console.ReadLine());
             Console.Write("Indtast din vægt i kilo: ");
-            int vægt = int.Parse(Console.ReadLine());
+            double vægt = double.Parse(Console.ReadLine());
             Console.Write("Indtast køn M/K: ");
-            int køn = int.Parse(Console.ReadLine());
-            int BMI;
+            string køn = Console.ReadLine();
+            double BMI;
             string vægtig = "";
             BMI = vægt / (højde * højde);
-            Console.Write($"Du har en BMI på {BMI}");
-            Console.Write(", det betyder at du ");
             if (BMI < 18.5)
             {
                 vægtig = "undervægtig";
-                Console.WriteLine($"er undervægtig.");
             }
             else if (BMI < 25)
             {
@@ -136,16 +133,28 @@ namespace AspIT
             {
                 vægtig = "overvægtig";
             }
-            else i9f
+            else
             {
                 vægtig = "meget overvægtig";
             }
-            else if (køn = M)
-            {
 
+            string køntekst;
+            if (køn == "M" || køn == "m")
+            {
+                køntekst = "mand";
+            }
+            else if (køn=="K" || køn=="k")
+            {
+                køntekst = "kvinde";
+            }
+            else
+            {
+                køntekst = køn;
             }
 
-            Console.WriteLine($"er {vægtig}.");
+            Console.Write($"Du har en BMI på {BMI}");
+            Console.Write(", det betyder at du ");
+            Console.WriteLine($"er en {vægtig} {køntekst}.");
 
         }
     }
